@@ -8,12 +8,12 @@
         </div>
         <div class="card-block">
           <div class="row">
-            <ng-container *ngIf="!citys">
+            <ng-container *ngIf="!portafolio">
               <div class="text-center">
                 <span>Sin registros</span>
               </div>
             </ng-container>
-            <ng-container *ngIf="citys">
+            <ng-container *ngIf="portafolio">
               <table class="table animated fadeIn">
                 <thead>
                   <tr>
@@ -23,10 +23,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngIf="citys">
-                    <th>{{ citys.name }}</th>
+                  <tr *ngIf="portafolio">
+                    <th>{{ portafolio.name }}</th>
                     <td>
-                      {{ citys.weather[0].description }}
+                      {{ portafolio.weather[0].description }}
                       <div></div>
                     </td>
                     <td>

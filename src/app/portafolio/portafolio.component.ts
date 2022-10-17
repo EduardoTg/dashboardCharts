@@ -5,12 +5,12 @@ import { Component, OnInit } from "@angular/core";
 import { FullLayoutComponent } from "../layouts/full-layout.component";
 
 @Component({
-  selector: "app-citys",
-  templateUrl: "./citys.component.html",
+  selector: "app-portafolio",
+  templateUrl: "./portafolio.component.html",
   styleUrls: ["./style.css"],
 })
-export class CitysComponent implements OnInit {
-  citys;
+export class PortafolioComponent implements OnInit {
+  portafolio;
   fieldsList: any = [];
   validador: any = {};
 
@@ -20,7 +20,7 @@ export class CitysComponent implements OnInit {
 
   ngOnInit() {
     this.fullLayoutComponent.sendCityObs.subscribe((response) => {
-      this.citys = response;
+      this.portafolio = response;
       
     });
   }

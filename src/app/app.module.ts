@@ -1,12 +1,12 @@
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from "@angular/common/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { LocationStrategy, HashLocationStrategy } from "@angular/common";
 import { AppComponent } from "./app.component";
 import { NAV_DROPDOWN_DIRECTIVES } from "./shared/nav-dropdown.directive";
 import { SIDEBAR_TOGGLE_DIRECTIVES } from "./shared/sidebar.directive";
 import { AsideToggleDirective } from "./shared/aside.directive";
-import { FormsModule, ReactiveFormsModule  } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 // Routing Module
 import { AppRoutingModule } from "./app.routing";
 // Layouts
@@ -18,8 +18,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { SaldosModule } from "./saldos/saldos.module";
 import { AccionesModule } from "./acciones/acciones.module";
+import { PortafolioModule } from "./portafolio/portafolio.module";
 //Styles
-import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { ButtonsModule } from "ngx-bootstrap/buttons";
 @NgModule({
   imports: [
     BrowserModule,
@@ -30,8 +31,9 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     DashboardModule,
     SaldosModule,
     AccionesModule,
+    PortafolioModule,
     ButtonsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [
     AppComponent,

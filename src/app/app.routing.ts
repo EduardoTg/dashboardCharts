@@ -3,6 +3,8 @@ import { Routes, RouterModule } from "@angular/router";
 import { FullLayoutComponent } from "./layouts/full-layout.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AccionesComponent } from "./acciones/acciones.component";
+import { SaldosComponent } from "./saldos/saldos.component";
+import { PortafolioComponent } from "./portafolio/portafolio.component";
 
 export const routes: Routes = [
   {
@@ -28,11 +30,11 @@ export const routes: Routes = [
       },
       {
         path: "portafolio",
-        component: DashboardComponent,
+        component: PortafolioComponent,
       },
       {
         path: "saldos",
-        component: DashboardComponent,
+        component: SaldosComponent,
       },
     ],
   },
