@@ -16,6 +16,7 @@ import { CityService } from "./services/citys.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // components
 import { CitysModule } from "./dashboard/dashboard.module";
+import { SaldosModule } from "./saldos/saldos.module";
 //Styles
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 @NgModule({
@@ -26,6 +27,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     HttpClientModule,
     BrowserAnimationsModule,
     CitysModule,
+    SaldosModule,
     ButtonsModule,
     ReactiveFormsModule
   ],
