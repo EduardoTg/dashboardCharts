@@ -12,11 +12,12 @@ import { AppRoutingModule } from "./app.routing";
 // Layouts
 import { FullLayoutComponent } from "./layouts/full-layout.component";
 // services
-import { CityService } from "./services/citys.service";
+import { ProyectService } from "./services/proyect.service";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // components
-import { CitysModule } from "./dashboard/dashboard.module";
+import { DashboardModule } from "./dashboard/dashboard.module";
 import { SaldosModule } from "./saldos/saldos.module";
+import { AccionesModule } from "./acciones/acciones.module";
 //Styles
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
 @NgModule({
@@ -26,8 +27,9 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    CitysModule,
+    DashboardModule,
     SaldosModule,
+    AccionesModule,
     ButtonsModule,
     ReactiveFormsModule
   ],
@@ -39,7 +41,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     AsideToggleDirective,
   ],
   providers: [
-    CityService,
+    ProyectService,
     {
       provide: LocationStrategy,
       useClass: HashLocationStrategy,

@@ -1,36 +1,45 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { FullLayoutComponent } from './layouts/full-layout.component';
-import { CitysComponent } from './dashboard/dashboard.component'
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { FullLayoutComponent } from "./layouts/full-layout.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { AccionesComponent } from "./acciones/acciones.component";
 
 export const routes: Routes = [
-/*     {
-        path: '',
-        redirectTo: 'search',
-        pathMatch: 'full'
-
-    }, */
-    {
-        path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
-
-    },
-    {
-        path: 'home',
-        component: FullLayoutComponent,
-        children: [
-            {
-                path: 'dashboard',
-                component : CitysComponent
-            }
-        ]
-
-    },
+  {
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full",
+  },
+  {
+    path: "home",
+    component: FullLayoutComponent,
+    children: [
+      {
+        path: "dashboard",
+        component: DashboardComponent,
+      },
+      {
+        path: "acciones",
+        component: AccionesComponent,
+      },
+      {
+        path: "movimientos",
+        component: DashboardComponent,
+      },
+      {
+        path: "portafolio",
+        component: DashboardComponent,
+      },
+      {
+        path: "saldos",
+        component: DashboardComponent,
+      },
+    ],
+  },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

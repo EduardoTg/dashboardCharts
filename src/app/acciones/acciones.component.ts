@@ -1,16 +1,14 @@
 import { Component, OnInit } from "@angular/core";
 
-import { City } from "../shared/common";
-
 import { FullLayoutComponent } from "../layouts/full-layout.component";
 
 @Component({
-  selector: "app-citys",
-  templateUrl: "./citys.component.html",
+  selector: "app-acciones",
+  templateUrl: "./acciones.component.html",
   styleUrls: ["./style.css"],
 })
-export class CitysComponent implements OnInit {
-  citys: City;
+export class AccionesComponent implements OnInit {
+  acciones;
   fieldsList: any = [];
   validador: any = {};
 
@@ -20,7 +18,7 @@ export class CitysComponent implements OnInit {
 
   ngOnInit() {
     this.fullLayoutComponent.sendCityObs.subscribe((response) => {
-      this.citys = response;
+      this.acciones = response;
       
     });
   }

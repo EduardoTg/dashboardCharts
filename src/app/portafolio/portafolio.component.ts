@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { City } from "../shared/common";
+;
 
 import { FullLayoutComponent } from "../layouts/full-layout.component";
 
@@ -10,7 +10,7 @@ import { FullLayoutComponent } from "../layouts/full-layout.component";
   styleUrls: ["./style.css"],
 })
 export class CitysComponent implements OnInit {
-  citys: City;
+  citys;
   fieldsList: any = [];
   validador: any = {};
 

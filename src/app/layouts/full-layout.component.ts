@@ -4,24 +4,24 @@ import { Router } from "@angular/router";
 import { Subject } from "rxjs";
 import Swal from "sweetalert2";
 
-import { CityService } from "../services/citys.service";
-import { City } from "../shared/common";
+import { ProyectService } from "../services/proyect.service";
+;
 
 @Component({
   selector: "app-dashboard",
   templateUrl: "./full-layout.component.html",
-  providers: [CityService],
+  providers: [ProyectService],
 })
 export class FullLayoutComponent implements OnInit {
   public disabled: boolean = false;
   public myForm: FormGroup;
-  public citys: City;
-  private sendCity = new Subject<City>();
+  public citys;
+  private sendCity = new Subject<any>();
   sendCityObs = this.sendCity.asObservable();
 
   constructor(
     private router: Router,
-    private cityService: CityService,
+    private ProyectService: ProyectService,
     private fb: FormBuilder
   ) {}
 
@@ -44,7 +44,7 @@ export class FullLayoutComponent implements OnInit {
   }
 
   onSubmit(form: FormGroup) {
-    this.cityService.getCitys(form.value.city).subscribe(
+    this.ProyectService.getCitys(form.value.city).subscribe(
       (citysResponse) => {
         this.citys = citysResponse;
         this.sendCity.next(this.citys);
