@@ -3,13 +3,13 @@ import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { ModalModule } from "ngx-bootstrap/modal";
 
-import { CitysComponent } from "./movimientos.component";
+import { MovimientosComponent } from "./movimientos.component";
 
 
 @NgModule({
-  declarations: [CitysComponent],
+  declarations: [MovimientosComponent],
   imports: [CommonModule, FormsModule, ModalModule.forRoot()],
   entryComponents: [],
-  bootstrap: [CitysComponent],
+  bootstrap: [MovimientosComponent],
 })
-export class CitysModule {}
+export class MovimientosModule {}

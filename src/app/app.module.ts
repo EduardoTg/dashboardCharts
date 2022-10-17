@@ -19,6 +19,7 @@ import { DashboardModule } from "./dashboard/dashboard.module";
 import { SaldosModule } from "./saldos/saldos.module";
 import { AccionesModule } from "./acciones/acciones.module";
 import { PortafolioModule } from "./portafolio/portafolio.module";
+import { MovimientosModule } from "./movimientos/movimientos.module";
 //Styles
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 @NgModule({
@@ -32,6 +33,7 @@ import { ButtonsModule } from "ngx-bootstrap/buttons";
     SaldosModule,
     AccionesModule,
     PortafolioModule,
+    MovimientosModule,
     ButtonsModule,
     ReactiveFormsModule,
   ],
