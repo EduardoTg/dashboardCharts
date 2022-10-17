@@ -6,6 +6,8 @@ import { AccionesComponent } from "./acciones/acciones.component";
 import { SaldosComponent } from "./saldos/saldos.component";
 import { PortafolioComponent } from "./portafolio/portafolio.component";
 import { MovimientosComponent } from "./movimientos/movimientos.component";
+import { ComunNames } from "../app/shared/common";
+
 
 export const routes: Routes = [
   {
@@ -18,23 +20,23 @@ export const routes: Routes = [
     component: FullLayoutComponent,
     children: [
       {
-        path: "dashboard",
+        path: ComunNames.dashboard ,
         component: DashboardComponent,
       },
       {
-        path: "acciones",
+        path: ComunNames.acciones,
         component: AccionesComponent,
       },
       {
-        path: "movimientos",
+        path: ComunNames.movimientos,
         component: MovimientosComponent,
       },
       {
-        path: "portafolio",
+        path: ComunNames.portafolio,
         component: PortafolioComponent,
       },
       {
-        path: "saldos",
+        path: ComunNames.saldos,
         component: SaldosComponent,
       },
     ],
