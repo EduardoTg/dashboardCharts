@@ -9,39 +9,18 @@
         </div>
         <div class="card-block">
           <div class="row">
-            <ng-container *ngIf="!movimientos">
+            <ng-container *ngIf="!series[0]">
               <div class="text-center">
                 <span>Sin registros</span>
               </div>
             </ng-container>
-            <ng-container *ngIf="movimientos">
-              <table class="table animated fadeIn">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Weather</th>
-                    <th scope="col">View</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngIf="movimientos">
-                    <th>{{ movimientos.name }}</th>
-                    <td>
-                      {{ movimientos.weather[0].description }}
-                      <div></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        (click)="showModal()"
-                      >
-                        Ver
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <ng-container *ngIf="series[0]">
+              <apx-chart
+                [series]="series"
+                [chart]="chartLine"
+                [title]="titleChart"
+                [xaxis]="xaxis"
+              ></apx-chart>
             </ng-container>
           </div>
         </div>

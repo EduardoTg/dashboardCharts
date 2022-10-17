@@ -11,9 +11,6 @@ import { ComunNames } from "../shared/common";
 })
 export class DashboardComponent implements OnInit {
   title = ComunNames.dashboard;
-  dashboard;
-  fieldsList: any = [];
-  validador: any = {};
 
   chartLine = {
     type: "line",
@@ -45,7 +42,6 @@ export class DashboardComponent implements OnInit {
 
       this.xaxis = { categories: yearsAxisX.reverse() };
 
-      this.dashboard = response;
     });
   }
 }
