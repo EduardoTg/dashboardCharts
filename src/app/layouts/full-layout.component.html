@@ -1,0 +1,74 @@
+<header
+  class="app-header navbar"
+  style="padding: 0px 40px; background-color: #002597"
+>
+  <div class="w-100">
+    <label style="color: white; font-size: 18px; font-family: cursive"
+      >Weather</label
+    >
+  </div>
+</header>
+
+<div class="app-body">
+  <div class="sidebar">
+    <nav class="sidebar-nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['dashboard']"
+          >
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['portafolio']"
+          >
+            Valor del portafolio
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['saldos']"
+          >
+            Saldos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['acciones']"
+          >
+            Acciones
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['movimientos']"
+          >
+            Movimientos
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Main content -->
+  <main class="main">
+    <br />
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.conainer-fluid -->
+  </main>
+</div>
+
+<footer class="app-footer text-center">Weather citys &copy; 2022.</footer>
