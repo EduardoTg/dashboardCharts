@@ -5,7 +5,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { AccionesComponent } from "./acciones/acciones.component";
 import { SaldosComponent } from "./saldos/saldos.component";
 import { PortafolioComponent } from "./portafolio/portafolio.component";
-import { MovimientosModule } from "./movimientos/movimientos.module";
+import { MovimientosComponent } from "./movimientos/movimientos.component";
 
 export const routes: Routes = [
   {
@@ -27,7 +27,7 @@ export const routes: Routes = [
       },
       {
         path: "movimientos",
-        component: MovimientosModule,
+        component: MovimientosComponent,
       },
       {
         path: "portafolio",
