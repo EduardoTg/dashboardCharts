@@ -4,44 +4,23 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header spaceBetween">
-          <strong>Fields List</strong>
+          <strong>Population Line</strong>
           <div class="buttonHeaderContainer"></div>
         </div>
         <div class="card-block">
           <div class="row">
-            <ng-container *ngIf="!dashboard">
+            <ng-container *ngIf="!series[0]">
               <div class="text-center">
-                <span>No city selected</span>
+                <span>Sin registros</span>
               </div>
             </ng-container>
-            <ng-container *ngIf="dashboard">
-              <table class="table animated fadeIn">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Weather</th>
-                    <th scope="col">View</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngIf="dashboard">
-                    <th>{{ dashboard.name }}</th>
-                    <td>
-                      {{ dashboard.weather[0].description }}
-                      <div></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        (click)="showModal()"
-                      >
-                        Ver
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <ng-container *ngIf="series[0]">
+              <apx-chart
+                [series]="series"
+                [chart]="chartLine"
+                [title]="titleChart"
+                [xaxis]="xaxis"
+              ></apx-chart>
             </ng-container>
           </div>
         </div>
@@ -50,44 +29,23 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header spaceBetween">
-          <strong>Fields List</strong>
+          <strong>Population Bar</strong>
           <div class="buttonHeaderContainer"></div>
         </div>
         <div class="card-block">
           <div class="row">
-            <ng-container *ngIf="!dashboard">
+            <ng-container *ngIf="!series[0]">
               <div class="text-center">
                 <span>Sin registros</span>
               </div>
             </ng-container>
-            <ng-container *ngIf="dashboard">
-              <table class="table animated fadeIn">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Weather</th>
-                    <th scope="col">View</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr *ngIf="dashboard">
-                    <th>{{ dashboard.name }}</th>
-                    <td>
-                      {{ dashboard.weather[0].description }}
-                      <div></div>
-                    </td>
-                    <td>
-                      <button
-                        type="button"
-                        class="btn btn-primary"
-                        (click)="showModal()"
-                      >
-                        Ver
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+            <ng-container *ngIf="series[0]">
+              <apx-chart
+                [series]="series"
+                [chart]="chartBar"
+                [title]="titleChart"
+                [xaxis]="xaxis"
+              ></apx-chart>
             </ng-container>
           </div>
         </div>

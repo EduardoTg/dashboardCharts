@@ -22,6 +22,8 @@ import { PortafolioModule } from "./portafolio/portafolio.module";
 import { MovimientosModule } from "./movimientos/movimientos.module";
 //Styles
 import { ButtonsModule } from "ngx-bootstrap/buttons";
+//
+import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   imports: [
     BrowserModule,
@@ -36,6 +38,7 @@ import { ButtonsModule } from "ngx-bootstrap/buttons";
     MovimientosModule,
     ButtonsModule,
     ReactiveFormsModule,
+    NgApexchartsModule
   ],
   declarations: [
     AppComponent,

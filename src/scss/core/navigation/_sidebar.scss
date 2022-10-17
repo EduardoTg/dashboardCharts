@@ -100,7 +100,7 @@
         padding: $sidebar-nav-link-padding-y $sidebar-nav-link-padding-x;
         color: $sidebar-nav-link-color;
         text-decoration: none;
-        background: #228fbf;
+        background: $sidebar-nav-link-active-bg;
         @include borders($sidebar-nav-link-borders);
         @if $enable-sidebar-nav-rounded {
           border-radius: $border-radius;
@@ -118,7 +118,7 @@
 
         &.active {
           color: $sidebar-nav-link-active-color;
-          background: $sidebar-nav-link-active-bg;
+          background: #228fbf;
           @include borders($sidebar-nav-link-active-borders);
 
           i {

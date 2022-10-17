@@ -24,7 +24,8 @@
               "src/scss/style.scss"
             ],
             "scripts": [
-              "./node_modules/katex/dist/katex.min.js"
+              "./node_modules/katex/dist/katex.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ],
             "aot": false,
             "vendorChunk": true,

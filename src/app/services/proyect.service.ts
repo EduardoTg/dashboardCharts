@@ -9,7 +9,13 @@ export class ProyectService {
 
   getCitys(cityName : string): Observable<any> {
     return this.http.get<any>(
-      CONFIG.API + "q=" + cityName + "&appid=" + CONFIG.APIKEY
+      "q=" + cityName + "&appid=" 
+    );
+  }
+
+  getPopulation(): Observable<any> {
+    return this.http.get<any>(
+      CONFIG.POPULATIONAPI
     );
   }
 }

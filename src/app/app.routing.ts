@@ -8,7 +8,6 @@ import { PortafolioComponent } from "./portafolio/portafolio.component";
 import { MovimientosComponent } from "./movimientos/movimientos.component";
 import { ComunNames } from "../app/shared/common";
 
-
 export const routes: Routes = [
   {
     path: "",
@@ -20,7 +19,7 @@ export const routes: Routes = [
     component: FullLayoutComponent,
     children: [
       {
-        path: ComunNames.dashboard ,
+        path: ComunNames.dashboard,
         component: DashboardComponent,
       },
       {
