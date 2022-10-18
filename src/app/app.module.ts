@@ -17,13 +17,12 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // components
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { SaldosModule } from "./saldos/saldos.module";
-import { AccionesModule } from "./acciones/acciones.module";
 import { PortafolioModule } from "./portafolio/portafolio.module";
 import { MovimientosModule } from "./movimientos/movimientos.module";
+import { AccionesModule } from "./acciones/acciones.module";
 //Styles
 import { ButtonsModule } from "ngx-bootstrap/buttons";
 //
-import { NgApexchartsModule } from "ng-apexcharts";
 @NgModule({
   imports: [
     BrowserModule,
@@ -33,12 +32,11 @@ import { NgApexchartsModule } from "ng-apexcharts";
     BrowserAnimationsModule,
     DashboardModule,
     SaldosModule,
-    AccionesModule,
     PortafolioModule,
     MovimientosModule,
+    AccionesModule,
     ButtonsModule,
     ReactiveFormsModule,
-    NgApexchartsModule
   ],
   declarations: [
     AppComponent,

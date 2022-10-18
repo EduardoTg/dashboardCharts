@@ -11,9 +11,6 @@ import { ComunNames } from "../shared/common";
 })
 export class AccionesComponent implements OnInit {
   title = ComunNames.acciones;
-  chartLine = {
-    type: "line",
-  };
 
   chartBar = {
     type: "bar",
@@ -28,6 +25,7 @@ export class AccionesComponent implements OnInit {
   series = [];
 
   constructor(private proyectService: ProyectService) {}
+
   ngOnInit() {
     this.proyectService.getPopulation().subscribe((response) => {
       const dataYear = response.data.map((year) => year.Population);
