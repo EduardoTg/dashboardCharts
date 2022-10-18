@@ -11,9 +11,6 @@ import { ComunNames } from "../shared/common";
 })
 export class PortafolioComponent implements OnInit {
   title = ComunNames.portafolio;
-  chartLine = {
-    type: "line",
-  };
 
   chartBar = {
     type: "bar",
@@ -31,13 +28,28 @@ export class PortafolioComponent implements OnInit {
 
   ngOnInit() {
     this.proyectService.getPopulation().subscribe((response) => {
-      const dataYear = response.data.map((year) => year.Population);
+      const dataYear = response.data.map((year) => year.Population / 6);
+      const dataMonthly = response.data.map((year) => year.Population / 12);
+      const dataDayly = response.data.map((year) => year.Population / 365);
       const yearsAxisX = response.data.map((year) => year.Year);
 
-      this.series.push({
-        name: "Population",
-        data: dataYear.reverse(),
-      });
+      this.series.push(
+        {
+          type: "bar",
+          name: "Year",
+          data: dataYear.reverse(),
+        },
+        {
+          type: "bar",
+          name: "Month",
+          data: dataMonthly.reverse(),
+        },
+        {
+          type: "bar",
+          name: "Day",
+          data: dataDayly.reverse(),
+        }
+      );
 
       this.xaxis = { categories: yearsAxisX.reverse() };
     });

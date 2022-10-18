@@ -1,17 +1,17 @@
 <div class="animated fadeIn">
   <div class="row">
     <h2 class="mb-3">{{ title | titlecase }}</h2>
-    <div class="col-lg-12">
+    <div class="col-lg-8">
       <div class="card">
         <div class="card-header spaceBetween">
-          <strong>Descarga de archivo Excel</strong>
+          <strong>Downland Excel by Aspexchart tool</strong>
           <div class="buttonHeaderContainer"></div>
         </div>
         <div class="card-block">
           <div class="row">
             <ng-container *ngIf="!series[0]">
               <div class="text-center">
-                <span>Sin registros</span>
+                <span>No data</span>
               </div>
             </ng-container>
             <ng-container *ngIf="series[0]">
