@@ -1,7 +1,22 @@
 <div class="animated fadeIn">
   <div class="row" >
     <h2 class="mb-3">{{ title | titlecase }}</h2>
-    <div class="col-lg-12">
+    <div class="col-lg-4">
+
+      <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+        <div>
+          <h4>Nutritional Values by food</h4>
+            <input class="form-control" formControlName="name" placeholder="find food...">
+          <div *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+            Please provide a name.
+          </div>
+        </div>
+
+        <button class="btn btn-primary mt-2" type="submit" [disabled]="myForm.invalid">Send</button>
+      </form>
+
+    </div>
+    <div class="col-lg-8">
       <div class="card">
         <div class="card-header spaceBetween">
           <strong>Fields List</strong>

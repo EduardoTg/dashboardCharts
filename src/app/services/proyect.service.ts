@@ -25,4 +25,10 @@ export class ProyectService {
     );
   }
 
+  getFoodValues(food :string): Observable<any> {
+    return this.http.get<any>(
+      CONFIG.FOODVALUES + food
+    );
+  }
+
   }
