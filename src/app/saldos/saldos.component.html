@@ -4,7 +4,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header spaceBetween">
-          <strong>Population Line</strong>
+          <strong>Población</strong>
           <div class="buttonHeaderContainer"></div>
         </div>
         <div class="card-block">
@@ -18,7 +18,6 @@
               <apx-chart
                 [series]="series"
                 [chart]="chartLine"
-                [title]="titleChart"
                 [xaxis]="xaxis"
               ></apx-chart>
             </ng-container>
@@ -29,7 +28,7 @@
     <div class="col-lg-6">
       <div class="card">
         <div class="card-header spaceBetween">
-          <strong>Population Bar</strong>
+          <strong>Productos en almacén</strong>
           <div class="buttonHeaderContainer"></div>
         </div>
         <div class="card-block">
@@ -41,9 +40,8 @@
             </ng-container>
             <ng-container *ngIf="series[0]">
               <apx-chart
-                [series]="series"
+                [series]="seriesBar"
                 [chart]="chartBar"
-                [title]="titleChart"
                 [xaxis]="xaxis"
               ></apx-chart>
             </ng-container>

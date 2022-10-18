@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup } from "@angular/forms";
-import { Subject } from "rxjs";
 
 @Component({
   selector: "app-dashboard",
@@ -9,9 +8,6 @@ import { Subject } from "rxjs";
 export class FullLayoutComponent implements OnInit {
   public disabled: boolean = false;
   public myForm: FormGroup;
-  public citys;
-  private sendCity = new Subject<any>();
-  sendCityObs = this.sendCity.asObservable();
 
   constructor() {}
 

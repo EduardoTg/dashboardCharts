@@ -18,4 +18,11 @@ export class ProyectService {
       CONFIG.POPULATIONAPI
     );
   }
-}
+
+  getProducts(): Observable<any> {
+    return this.http.get<any>(
+      CONFIG.PRODUCTS
+    );
+  }
+
+  }
